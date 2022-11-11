@@ -1,0 +1,70 @@
+@import "./fonts.css";
+@import "./media.css";
+
+:root {
+--font-gray:rgba(153, 153, 153, 1);
+--font-family:"Libre Franklin"
+}
+/*BASE CONFIG*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Tenor Sans',Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button {
+    background: none;
+    border: 0;
+}
+/*BASE CONFIG*/
+/*UNIQUE*/
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width:1240px;
+}
+
+/*UNIQUE*/
+/*HEADER SECTION*/
+.header {
+    height: 90px;
+    padding: 90px;
+}
+.header__nav {
+    height: 100%;
+    word-spacing: 40px;
+
+}
+.header__link {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: var(--font-family);
+    
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+   
+}
+/*HEADER SECTION*/
+/*IllUSTRATION SECTION*/
+.grid__illustration {
+display: grid;
+grid-template-columns: 1fr 1fr;
+
+}
+/*IllUSTRATION SECTION*/
+/*GRID CARDS*/
+.grid__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+/*GRID CARDS*/
+
