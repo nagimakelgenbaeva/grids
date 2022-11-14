@@ -3,7 +3,7 @@
 
 :root {
 --font-gray:rgba(153, 153, 153, 1);
---font-family:"Libre Franklin"
+
 }
 /*BASE CONFIG*/
 * {
@@ -12,7 +12,8 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Tenor Sans',Arial, Helvetica, sans-serif;
+    font-family: 'Tenor Sans','Times New Roman', Times, serif;
+ 
 }
 a {
     text-decoration: none;
@@ -24,47 +25,205 @@ button {
 }
 /*BASE CONFIG*/
 /*UNIQUE*/
+section {
+    background-color: aqua;
+}
 .container {
     padding: 0 10px;
     margin: 0 auto;
-    max-width:1240px;
+    max-width: 1220px;
 }
 
 /*UNIQUE*/
 /*HEADER SECTION*/
 .header {
     height: 90px;
-    padding: 90px;
+   
+  
+   
+   
+    background-color: aquamarine;
+   
+}
+.header .container {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+  
 }
 .header__nav {
-    height: 100%;
-    word-spacing: 40px;
-
+  word-spacing: 40px;
+   padding-left: 25px;
+} 
+.burger {
+    display: none;
+}
+.burger__btn {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+}
+.burger__btn::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    top: -10px;
+    left: 0;
+    transition: .6s;
+}
+.burger__btn::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    bottom: -10px;
+    left: 0;
+    transition: .6s;
+}
+#burger:checked + .burger__btn {
+background-color: aquamarine;
+}
+#burger:checked + .burger__btn::before {
+    transform: rotate(45deg);
+    top: 0;
+    z-index: 999;
+}
+#burger:checked + .burger__btn::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+    z-index: 999;
+}
+.burger__nav {
+    position: absolute;
+    background-color: aquamarine;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    top: -200px;
+    transition: .6s;
+}
+#burger:checked ~ .burger__nav {
+    top:54px;
+}
+.burger__link {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 .header__link {
     font-size: 14px;
     line-height: 24px;
-    font-family: var(--font-family);
+    
     
 }
-.header .container {
-    display: flex;
-    justify-content: space-between;
-   
-}
+
 /*HEADER SECTION*/
 /*IllUSTRATION SECTION*/
-.grid__illustration {
+.grid {
 display: grid;
-grid-template-columns: 1fr 1fr;
-
+grid-template-columns: 2fr 1fr;
 }
+.main__desc{
+ padding: 0 0 0 51px;
+}
+.main__text1 {
+    margin-top:18px;
+    margin-bottom: 27px;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    width: 429px;
+    height: 168px;
+  
+}
+.main__text {
+    height:72px ;
+    width: 419px;
+    font-size:16px;
+    color: var(--font-gray);
+    line-height: 24px;
+    margin-bottom: 28px;
+}
+.main__name1 {
+   
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family:'Libre Franklin' ;
+   
+    text-transform: uppercase;
+}
+
+
+
+.main__name {
+   
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family:'Libre Franklin' ;
+    margin-bottom: 74px;
+    text-transform: uppercase;
+}
+.grid svg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.title__grid {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--font-gray);
+}
+
 /*IllUSTRATION SECTION*/
 /*GRID CARDS*/
 .grid__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-top: 40px;
+    
 }
+
 /*GRID CARDS*/
 
+.grid__card-art {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--font-gray);
+    letter-spacing: 1px;  
+    line-height: 12px;
+    font-weight: 400;
+    font-family:'Libre Franklin' ;
+    padding-top: 24px;
+}
+.grid__text-desc{
+    height:72px ;
+    width: 100%;
+    font-size:20px;
+   line-height: 24px;
+     margin-top: 18px;
+     margin-bottom: 5px;
+}
+
+.grid__card {
+    height: 250px;
+    width: 380px;
+}
+    .grid__card img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    
